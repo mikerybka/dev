@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"net/http"
 	"os"
@@ -14,5 +15,8 @@ func main() {
 		os.Stdout.Write([]byte("\n"))
 	})
 	port := util.EnvVar("PORT", "3000")
-	panic(http.ListenAndServe(":"+port, nil))
+	err := http.ListenAndServe(":"+port, nil)
+	if err != nil {
+		fmt.Println(err)
+	}
 }
