@@ -14,5 +14,5 @@ func main() {
 		os.Stdout.Write([]byte("\n"))
 	})
 	port := util.EnvVar("PORT", "3000")
-	http.ListenAndServe(":"+port, nil)
+	panic(http.ListenAndServe(":"+port, nil))
 }
