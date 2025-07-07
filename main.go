@@ -85,7 +85,7 @@ func main() {
 			return
 		}
 
-		fmt.Fprintf(w, "%g%%\n", res.Result.VerificationProgress*100)
+		fmt.Fprintf(w, "Verification progress: %g%%\n", res.Result.VerificationProgress*100)
 	})
 
 	http.HandleFunc("POST /api/eval", func(w http.ResponseWriter, r *http.Request) {
