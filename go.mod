@@ -1,10 +1,8 @@
 module github.com/mikerybka/dev
 
-go 1.23.5
+go 1.24.4
 
-require github.com/mikerybka/util v0.0.0-20250612144308-79c8fd3c02d9
-
-require github.com/stretchr/testify v1.8.4 // indirect
+require github.com/mikerybka/util v0.0.0-20250706225236-9c01d2872fd3
 
 require (
 	github.com/fsnotify/fsnotify v1.9.0 // indirect
