@@ -85,7 +85,7 @@ func main() {
 			return
 		}
 
-		json.NewEncoder(w).Encode(res)
+		fmt.Fprintln(w, res.Result.VerificationProgress)
 	})
 
 	http.HandleFunc("POST /api/eval", func(w http.ResponseWriter, r *http.Request) {
